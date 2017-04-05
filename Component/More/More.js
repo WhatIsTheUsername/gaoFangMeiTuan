@@ -17,6 +17,9 @@ import {
 //引入外部组件
 var CommonCell = require("./CommonCell");
 
+var Dimensions = require("Dimensions");
+var {width} = Dimensions.get("window");
+
 var More = React.createClass({
 
     render() {
@@ -24,9 +27,9 @@ var More = React.createClass({
             <View style={styles.container}>
                 
                 {/*导航条*/}
-                {this.renderNavBar()};
+                {this.renderNavBar()}
                 
-                <ScrollView>
+                <ScrollView style={{width:width}}>
                     <View style={{marginTop: 20}}>
                         <CommonCell title='扫一扫'/>
                     </View>
@@ -37,31 +40,37 @@ var More = React.createClass({
                         <CommonCell title='消息提醒'/>
                     </View>
                     <View >
-                        <CommonCell title='邀请好友'/>
+                        <CommonCell title='余额'/>
+                    </View>
+                    <View >
+                        <CommonCell title='抵用券'/>
+                    </View>
+                    <View >
+                        <CommonCell title='会员卡'/>
                     </View>
                     <View >
                         <CommonCell title='清空缓存' rightTitle='1.5M'/>
                     </View>
                     <View style={{marginTop: 20}}>
-                        <CommonCell title='问卷调查'/>
+                        <CommonCell title='好友去哪'/>
                     </View>
                     <View >
-                        <CommonCell title='支付帮助'/>
+                        <CommonCell title='我的评价'/>
                     </View>
                     <View >
-                        <CommonCell title='网络诊断'/>
+                        <CommonCell title='我的收藏'/>
                     </View>
                     <View >
-                        <CommonCell title='清空缓存'/>
+                        <CommonCell title='会员中心'/>
                     </View>
                     <View >
-                        <CommonCell title='清空缓存'/>
+                        <CommonCell title='积分商城'/>
+                    </View>
+                    <View style={{marginTop: 20}}>
+                        <CommonCell title='客服中心'/>
                     </View>
                     <View >
-                        <CommonCell title='扫一扫'/>
-                    </View>
-                    <View >
-                        <CommonCell title='扫一扫'/>
+                        <CommonCell title='关于美团'/>
                     </View>
                 </ScrollView>
             </View>
@@ -73,7 +82,7 @@ var More = React.createClass({
             <View style={styles.navOutViewStyle}>
                 <Text style={styles.textStyle}>更多</Text>
                 <TouchableOpacity onPress={()=>{
-                    alert("点击了more");
+                    alert("点击了more")
                 }} style={styles.rightViewStyle}>
                     <Image soure={{uri:"icon_mine_setting"}} style={styles.navRightImgStyle}/>
                 </TouchableOpacity>
@@ -101,6 +110,8 @@ const styles = StyleSheet.create({
         backgroundColor:"rgba(255,96,0,1.0)",
         flexDirection:"row",
         alignItems:"center",
+        justifyContent:"center",
+        width:width
 
     },
 

@@ -86,4 +86,4 @@ const styles = StyleSheet.create({
     }
 });
 
-AppRegistry.registerComponent('gaoFangMeiTuan', () => gaoFangMeiTuan);
+module.exports = Mine;

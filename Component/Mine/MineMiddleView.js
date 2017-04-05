@@ -19,7 +19,7 @@ var MineMiddleView = React.createClass({
     render(){
         return(
             <View style={styles.container}>
-                {this.renderAllItem}
+                {this.renderAllItem()}
             </View>
         );
     },

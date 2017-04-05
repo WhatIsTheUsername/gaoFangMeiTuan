@@ -9,12 +9,12 @@ import {
     Text,
     View,
     Image,
-    TouchableOpacity
+    TouchableOpacity,
 } from 'react-native';
 
 
 var Dimensions = require("Dimensions");
-var {ScreenW} = Dimensions.get("window");
+var {width} = Dimensions.get("window");
 var MiddleCommonView = require("./HomeMiddleCommonView");
 
 var TopMiddleData = require("../../LocalData/HomeTopMiddleLeft.json");
@@ -87,7 +87,7 @@ const styles = StyleSheet.create({
     },
 
     leftViewStyle:{
-        width:ScreenW * 0.5,
+        width:width * 0.5,
         height:119,
         backgroundColor:"white",
         marginRight:0.5,

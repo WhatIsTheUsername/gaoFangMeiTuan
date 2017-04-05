@@ -11,7 +11,7 @@ import {
 
 var MiddleCommonView = require("./HomeMiddleCommonView");
 var Dimensions = require("Dimensions");
-var {ScreenW} = Dimensions.get("window");
+var {width} = Dimensions.get("window");
 
 //导入外部Json数据
 var Home_D4 = require("../../LocalData/XMG_Home_D4.json");
@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
     bottomViewStyle: {
         flexDirection:"row",
         flexWrap:"wrap",
-        width:ScreenW
+        width:width
     }
 });
 

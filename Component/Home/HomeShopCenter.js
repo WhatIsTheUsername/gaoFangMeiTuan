@@ -59,7 +59,7 @@ var HomeShopCenter = React.createClass({
                 <ShopCenterItem
                     key={i}
                     shopImage = {data.img}
-                    shopSale={data.showText.text}
+                    shopSale={data.showtext.text}
                     shopName = {data.name}
                     detailurl = {data.detailurl}
                     popToShopCenter={

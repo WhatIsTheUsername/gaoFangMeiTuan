@@ -13,7 +13,7 @@ import {
 
 
 var Dimensions = require("Dimensions");
-var {ScreenW} = Dimensions.get("window");
+var {width} = Dimensions.get("window");
 
 
 
@@ -53,7 +53,7 @@ var HomeBottomCommonCell = React.createClass({
 
 const styles = StyleSheet.create({
     container: {
-        width:ScreenW,
+        width:width,
         flexDirection:"row",
         height:44,
         backgroundColor:"white",

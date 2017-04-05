@@ -12,7 +12,7 @@ import {
 } from 'react-native';
 
 var Dimensions = require("Dimensions");
-var {ScreenW} = Dimensions.get("window");
+var {width} = Dimensions.get("window");
 
 
 var HomeMiddleCommonView = React.createClass({
@@ -34,7 +34,7 @@ var HomeMiddleCommonView = React.createClass({
         return(
           <TouchableOpacity
               onPress={()=>this.clickCell(this.props.detailUrl)}
-              style={{width:ScreenW*0.5, height:60}}
+              style={{width:width*0.5, height:60}}
           >
               <View style={styles.container}>
                   {/*左边*/}
@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
         justifyContent: 'space-around',
         alignItems: 'center',
         backgroundColor: 'white',
-        width: ScreenW*0.5 -1,
+        width: width*0.5 -1,
         height:59,
         flexDirection:"row",
         marginBottom:1,
@@ -92,3 +92,5 @@ const styles = StyleSheet.create({
 });
 
 module.exports = HomeMiddleCommonView;
+
+

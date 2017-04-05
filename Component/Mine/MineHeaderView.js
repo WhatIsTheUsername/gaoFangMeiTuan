@@ -15,12 +15,12 @@ import {
 
 
 var Dimensions = require("Dimensions");
-var {ScreenW} = Dimensions.get("window");
+var {width} = Dimensions.get("window");
 
 var MineHeaderView = React.createClass({
     render(){
         return(
-            <View styles={styles.container}>
+            <View style={styles.container}>
                 {/*上部分*/}
                 {this.renderTopView()}
                 {/*下部分*/}
@@ -32,7 +32,7 @@ var MineHeaderView = React.createClass({
     renderTopView(){
         return(
             <View style={styles.topViewStyle}>
-                <Image source={{uri:"see"}} style={styles.leftIconStyle}/>
+                <Image source={{uri:"icon_homepage_dailyNewDealCategory"}} style={styles.leftIconStyle}/>
                 <View style={styles.centerViewStyle}>
                     <Text style={{fontSize:18, color:"white", fontWeight:"bold"}}>吃货在此</Text>
                     <Image source={{uri:"avatar_vip"}} style={{width:17, height:17}}/>
@@ -79,7 +79,7 @@ const styles = StyleSheet.create({
     },
     centerViewStyle:{
         flexDirection:"row",
-        width:ScreenW * 0.72
+        width:width * 0.72
     },
     topViewStyle:{
         flexDirection:"row",
@@ -102,7 +102,7 @@ const styles = StyleSheet.create({
         bottom:0
     },
     bottomInnerViewStyle:{
-        width: ScreenW/3.0+1,
+        width: width/3.0+1,
         height:40,
         backgroundColor:"rgba(255,255,255,0.4)",
         alignItems:"center",

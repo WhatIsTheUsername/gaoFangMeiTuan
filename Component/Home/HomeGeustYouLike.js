@@ -70,7 +70,7 @@ var HomeGeustYouLike = React.createClass({
                         <Text style={{color:"gray"}}>{rowData.title}</Text>
                         <View style={styles.rightBottomViewStyle}>
                             <Text style={{color:"red"}}>¥{rowData.pricecalendar[0].price}</Text>
-                            <Text style={{color:"gray", foneSize:11}}>门市价:¥{rowData.value}</Text>
+                            <Text style={{color:"gray", fontSize:11, marginLeft:8}}>门市价:¥{rowData.value}</Text>
                         </View>
                     </View>
                 </View>
@@ -79,7 +79,7 @@ var HomeGeustYouLike = React.createClass({
     },
 
     dealWithImgUrl(url){
-        if (url.search(w.h) == -1){
+        if (url.search("w.h") == -1){
             return url;
         }else {
             return url.replace("w.h", "120.90");
